@@ -1,0 +1,1 @@
+// Copia aquí todos los comandos que has usado para crear la base de datos.
