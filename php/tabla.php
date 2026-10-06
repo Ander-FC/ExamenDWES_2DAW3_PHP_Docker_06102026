@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Unimos los idiomas seleccionados en un solo texto
     if (isset($_POST["idiomas"])) {
-        $idiomas = implode(", ", $_POST["idiomas"]); // implode convierte el array de idiomas en una cadena separada por comas
+        $idiomas = implode(", ", $_POST["idiomas"]); // implode convierte el array de idiomas en una cadena separada por comas, para que se pueda almacenar en la base de datos 
     }
 
     // Preparamos la consulta para insertar la solicitud
