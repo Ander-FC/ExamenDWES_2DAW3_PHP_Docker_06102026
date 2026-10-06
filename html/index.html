@@ -7,11 +7,52 @@
     <body>
         <h1>Centro de Ayuda al Empleo</h1>
         <h2>Formulario de solicitud</h2>
+        <!-- Botones para consultar las solicitudes por profesión -->
         <button onclick="location.href='../php/tabla.php?tipo=soldadura'">Soldadura</button>
         <button onclick="location.href='../php/tabla.php?tipo=informatica'">Informática</button>
         <button onclick="location.href='../php/tabla.php?tipo=socio'">Asistencia Sociosanitaria</button>
-        <form action="../php/tabla.php" method="???">
+        <!-- El formulario envía los datos a tabla.php mediante POST -->
+        <form action="../php/tabla.php" method="post">
             <!-- Añade aquí todos los datos que te pido en el enunciado -->
-        <form>
+
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+
+            <label for="dni">DNI</label>
+            <input type="text" id="dni" name="dni" required>
+
+            <label for="f_nac">Fecha de nacimiento</label>
+            <input type="date" id="f_nac" name="f_nac" required>
+
+            <label for="tlf">Teléfono</label>
+            <input type="tel" id="tlf" name="tlf" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="profesion">Profesión estudiada</label>
+            <select id="profesion" name="profesion" required>
+                <option value="soldadura">Soldadura</option>
+                <option value="informatica">Informática</option>
+                <option value="socio">Asistencia Sociosanitaria</option>
+            </select>
+
+            <label>Jornada</label>
+            <input type="radio" id="jornadaParcial" name="jornadaParcial" value="1" required>
+            <label for="jornadaParcial">Parcial</label>
+            <input type="radio" id="jornadaCompleta" name="jornadaParcial" value="0">
+            <label for="jornadaCompleta">Completa</label>
+
+            <label>Idiomas</label>
+            <input type="checkbox" id="euskera" name="idiomas[]" value="Euskera">
+            <label for="euskera">Euskera</label>
+            <input type="checkbox" id="ingles" name="idiomas[]" value="Inglés">
+            <label for="ingles">Inglés</label>
+
+            <input type="submit" value="Enviar solicitud">
+        </form>
     </body>
 </html>
